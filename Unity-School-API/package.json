@@ -1,0 +1,31 @@
+{
+    "name": "unity-school-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node app",
+        "fresh": "npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+        "migrate": "npx sequelize-cli db:migrate",
+        "seed": "npx sequelize-cli db:seed:all",
+        "down": "npx sequelize-cli db:migrate:undo:all",
+        "dev": "nodemon app"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.1.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "express-validator": "^6.14.2",
+        "jsonwebtoken": "^8.5.1",
+        "multer": "^1.4.5-lts.1",
+        "mysql2": "^2.3.3",
+        "sequelize": "^6.25.5"
+    },
+    "devDependencies": {
+        "sequelize-cli": "^6.5.2"
+    }
+}
