@@ -13,7 +13,7 @@ module.exports = {
         type: Sequelize.BIGINT,
         allowNull: false,
       },
-      name: {
+      username: {
         type: Sequelize.STRING
       },
       message: {

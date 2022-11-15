@@ -9,6 +9,35 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.BIGINT
       },
+      name: {
+        type: Sequelize.STRING
+      },
+      slug: {
+        type: Sequelize.STRING,
+        unique: true
+      },
+      description: {
+        type: Sequelize.STRING
+      },
+      address: {
+        type: Sequelize.STRING
+      },
+      logo: {
+        type: Sequelize.STRING
+      },
+      email: {
+        type: Sequelize.STRING,
+        unique: true
+      },
+      image: {
+        type: Sequelize.STRING
+      },
+      noTelp: {
+        type: Sequelize.STRING
+      },
+      isActive: {
+        type: Sequelize.BOOLEAN
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

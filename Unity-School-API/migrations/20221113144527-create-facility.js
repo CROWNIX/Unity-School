@@ -7,7 +7,7 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.BIGINT
       },
       schoolId: {
         type: Sequelize.BIGINT,
@@ -15,6 +15,9 @@ module.exports = {
       },
       name: {
         type: Sequelize.STRING
+      },
+      total: {
+        type: Sequelize.INTEGER
       },
       image: {
         type: Sequelize.STRING

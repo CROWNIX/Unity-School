@@ -14,7 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   facility.init({
+    schoolId: DataTypes.BIGINT,
     name: DataTypes.STRING,
+    total: DataTypes.STRING,
     image: DataTypes.STRING,
   }, {
     sequelize,

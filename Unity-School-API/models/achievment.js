@@ -14,7 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   achievment.init({
+    schoolId: DataTypes.BIGINT,
     name: DataTypes.STRING,
+    level: DataTypes.STRING,
     image: DataTypes.STRING,
   }, {
     sequelize,
