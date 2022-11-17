@@ -20,7 +20,7 @@ app.use(cors({credentials: true, origin: 'http://localhost:8080'}));
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({limit: '50mb', extended: true}));
 
-// app.use('/api/admin', adminRoute);
+app.use('/api/admin', adminRoute);
 app.use('/api/auth', authRoute);
 // app.use('/api', userRoute);
 

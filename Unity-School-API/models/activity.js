@@ -14,6 +14,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   activity.init({
+    id: {
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+      type: DataTypes.BIGINT
+    },
     schoolId: DataTypes.BIGINT,
     name: DataTypes.STRING,
     image: DataTypes.STRING,

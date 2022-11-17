@@ -14,7 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   achievment.init({
-    schoolId: DataTypes.BIGINT,
+    schoolId: {
+      type: DataTypes.BIGINT,
+      allowNull: false,
+    },
     name: DataTypes.STRING,
     level: DataTypes.STRING,
     image: DataTypes.STRING,

@@ -14,7 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   facility.init({
-    schoolId: DataTypes.BIGINT,
+    schoolId: {
+      type: DataTypes.BIGINT,
+      allowNull: false,
+    },
     name: DataTypes.STRING,
     total: DataTypes.STRING,
     image: DataTypes.STRING,

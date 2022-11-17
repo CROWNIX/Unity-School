@@ -13,15 +13,38 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
+  
   User.init({
-    username: DataTypes.STRING,
-    email: DataTypes.STRING,
+    username: {
+      type: DataTypes.STRING,
+      unique: true
+    },
+    email: {
+      type: DataTypes.STRING,
+      unique: true
+    },
     password: DataTypes.STRING,
-    image: DataTypes.STRING,
-    isAdmin: DataTypes.BOOLEAN,
+    image: {
+      type: DataTypes.STRING,
+      defaultValue: 'default.jpg'
+    },
+    isAdmin: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    isVerified: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    accessToken: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'User',
+    hooks: {
+      beforeCreate: (user) => {
+        user.username = user.username.toLowerCase()
+      }
+    }
   });
   return User;
 };

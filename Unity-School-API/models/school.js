@@ -18,11 +18,17 @@ module.exports = (sequelize, DataTypes) => {
   }
   school.init({
     name: DataTypes.STRING,
-    slug: DataTypes.STRING,
+    slug: {
+      type: DataTypes.STRING,
+      unique: true
+    },
     description: DataTypes.STRING,
     address: DataTypes.STRING,
     logo: DataTypes.STRING,
-    email: DataTypes.STRING,
+    email: {
+      type: DataTypes.STRING,
+      unique: true
+    },
     image: DataTypes.STRING,
     noTelp: DataTypes.STRING,
     isActive: DataTypes.BOOLEAN,
