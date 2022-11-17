@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {check} = require("express-validator");
+const {check} = require('express-validator');
 const {getAllSchools, getSchoolById, createSchool, updateSchool, deleteSchool} = require('../controllers/adminSchoolController');
 
 router.get('/schools', getAllSchools);

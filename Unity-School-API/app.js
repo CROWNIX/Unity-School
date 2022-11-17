@@ -9,10 +9,9 @@ const chalk = require('chalk')
 const app = express();
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-// const adminRoute = require('./routes/adminRoute');
+const adminRoute = require('./routes/adminRoute');
 const authRoute = require('./routes/authRoute');
-// const userRoute = require('./routes/userRoute');
-const dns = require('dns');
+const userRoute = require('./routes/userRoute');
 
 app.use(express.static('public'));
 app.use(cookieParser());
@@ -20,9 +19,9 @@ app.use(cors({credentials: true, origin: 'http://localhost:8080'}));
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({limit: '50mb', extended: true}));
 
-app.use('/api/admin', adminRoute);
+app.use('/api', userRoute);
 app.use('/api/auth', authRoute);
-// app.use('/api', userRoute);
+app.use('/api/admin', adminRoute);
 
 app.listen(port, () => {
     console.log(`${apiName} | Listening at\n\n ${chalk.white.bold("Local:")} ${chalk.green(`http://${API_HOST}:${port}`)}\n`);

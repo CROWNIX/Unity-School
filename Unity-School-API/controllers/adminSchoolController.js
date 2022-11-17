@@ -18,4 +18,4 @@ const deleteSchool = async(req, res) => {
 
 }
 
-module.exports = getAllSchools, getSchoolById, createSchool, updateSchool, deleteSchool
+module.exports = {getAllSchools, getSchoolById, createSchool, updateSchool, deleteSchool};

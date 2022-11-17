@@ -3,17 +3,17 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class comment extends Model {
+  class Comment extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({school}) {
-      this.belongsTo(school, {foreignKey: 'schoolId'});
+    static associate({School}) {
+      this.belongsTo(School, {foreignKey: 'schoolId'});
     }
   }
-  comment.init({
+  Comment.init({
     schoolId: {
       type: DataTypes.BIGINT,
       allowNull: false,
@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     message: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'comment',
+    modelName: 'Comment',
   });
-  return comment;
+  return Comment;
 };
