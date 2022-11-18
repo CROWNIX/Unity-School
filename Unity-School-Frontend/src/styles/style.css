@@ -1,6 +1,4 @@
 /********** Template CSS **********/
-@import "~bootstrap/scss/bootstrap";
-
 :root {
     --primary: #6222cc;
     --secondary: #fba504;
@@ -209,7 +207,7 @@ h6,
 .hero-header {
     margin-bottom: 6rem;
     padding: 18rem 0;
-    background: url(../img/blob-top-left.png), url(../img/blob-top-right.png), url(../img/blob-bottom-left.png), url(../img/blob-bottom-right.png), url(../img/blob-center.png), url(../img/bg-bottom.png);
+    background: url(../public/img/blob-top-left.png), url(../public/img/blob-top-right.png), url(../public/img/blob-bottom-left.png), url(../public/img/blob-bottom-right.png), url(../public/img/blob-center.png), url(../public/img/bg-bottom.png);
     background-position: left 0px top 0px, right 0px top 0px, left 0px bottom 0px, right 0px bottom 0px, center center, center bottom;
     background-repeat: no-repeat;
 }
@@ -301,7 +299,7 @@ h6,
 /*** Fact ***/
 .fact {
     margin: 6rem 0;
-    background: url(../img/blob-top-left.png), url(../img/blob-top-right.png), url(../img/blob-bottom-left.png), url(../img/blob-bottom-right.png), url(../img/blob-center.png);
+    background: url(../public/img/blob-top-left.png), url(../public/img/blob-top-right.png), url(../public/img/blob-bottom-left.png), url(../public/img/blob-bottom-right.png), url(../public/img/blob-center.png);
     background-position: left 0px top 0px, right 0px top 0px, left 0px bottom 0px, right 0px bottom 0px, center center;
     background-repeat: no-repeat;
 }
@@ -329,14 +327,14 @@ h6,
     align-items: center;
     justify-content: center;
     color: var(--light);
-    background: url(../img/blob-primary.png) center center no-repeat;
+    background: url(../public/img/blob-primary.png) center center no-repeat;
     background-size: contain;
     transition: 0.5s;
 }
 
 .service-item:hover .service-icon {
     color: var(--dark);
-    background: url(../img/blob-secondary.png) center center no-repeat;
+    background: url(../public/img/blob-secondary.png) center center no-repeat;
     background-size: contain;
 }
 
@@ -416,7 +414,7 @@ h6,
 /*** Newsletter ***/
 .newsletter {
     margin: 6rem 0;
-    background: url(../img/blob-top-left.png), url(../img/blob-top-right.png), url(../img/blob-bottom-left.png), url(../img/blob-bottom-right.png), url(../img/blob-center.png);
+    background: url(../public/img/blob-bottom-left.png), url(../public/img/blob-top-right.png), url(../public/img/blob-bottom-left.png), url(../public/img/blob-bottom-right.png), url(../public/img/blob-center.png);
     background-position: left 0px top 0px, right 0px top 0px, left 0px bottom 0px, right 0px bottom 0px, center center;
     background-repeat: no-repeat;
 }
@@ -468,7 +466,7 @@ h6,
 .footer {
     margin-top: 6rem;
     padding-top: 9rem;
-    background: url(../img/bg-top.png), url(../img/map.png);
+    background: url(../public/img/bg-top.png), url(../public/img/map.png);
     background-position: center top, center center;
     background-repeat: no-repeat;
 }
