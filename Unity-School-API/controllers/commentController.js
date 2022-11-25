@@ -1,7 +1,7 @@
 const {validationResult} = require('express-validator');
 const {Comment} = require('../models');
 
-const createComment = async(req, res) => {
+const createComment = async (req, res) => {
     const {schoolId, username, message} = req.body;
     const errors = validationResult(req);
 
@@ -13,8 +13,8 @@ const createComment = async(req, res) => {
         return res.status(201).json({message: 'Comment berhasil ditambahkan'});
     } catch (error) {
         console.log(error);
-        res.sendStatus(500);
+        return res.sendStatus(500);
     }
-}
+};
 
 module.exports = {createComment};

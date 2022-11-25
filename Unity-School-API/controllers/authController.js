@@ -22,7 +22,7 @@ const login = async (req, res) => {
     try {
         const user = await findUserByEmail(email);
 
-        if(!user) return res.status(404).json({message: 'Email / password salah'});
+        if (!user) return res.status(404).json({message: 'Email / password salah'});
 
         const match = await bcrypt.compare(password, user.password);
 
@@ -45,13 +45,10 @@ const register = async (req, res) => {
 
     if (!errors.isEmpty()) return res.status(400).json({errors: errors.array()});
 
-
     try {
-        if(await findUserByUsername(username)) return res.status(404).json({message: 'Username sudah terdaftar'})
+        if (await findUserByUsername(username)) return res.status(404).json({message: 'Username sudah terdaftar'});
 
-
-        if(await findUserByEmail(email)) return res.status(404).json({message: 'Email sudah terdaftar'});
-
+        if (await findUserByEmail(email)) return res.status(404).json({message: 'Email sudah terdaftar'});
 
         const salt = await bcrypt.genSalt();
         const hashPassword = await bcrypt.hash(password, salt);
@@ -59,7 +56,7 @@ const register = async (req, res) => {
         await User.create({username, email, password: hashPassword});
 
         return res.status(201).json({message: 'Akun berhasil terdaftar'});
-        
+
         // if(checkEmail(email)){
         //     return res.status(404).json({message: 'Email has been registered'});
         // }else{
@@ -78,21 +75,19 @@ const register = async (req, res) => {
     }
 };
 
-const logout = (req, res) => {
-
-};
+const logout = (req, res) => {};
 
 const findUserByEmail = async (email) => {
     const user = await User.findOne({where: {email}});
 
     return user;
-}
+};
 
 const findUserByUsername = async (username) => {
     const user = await User.findOne({where: {username: username.toLowerCase()}});
 
     return user;
-}
+};
 
 const sendEmail = (mailOptions, email) => {
     transporter.sendMail(mailOptions, async (err, info) => {
@@ -100,12 +95,12 @@ const sendEmail = (mailOptions, email) => {
 
         return res.status(200).json({message: `OTP code successfully sent to ${email}`});
     });
-}
+};
 
-const checkEmail = async(email) => {
+const checkEmail = async (email) => {
     const user = findUserByEmail(email);
 
-    return user && user.isVerified || !user.isVerified;
-}
+    return (user && user.isVerified) || !user.isVerified;
+};
 
 module.exports = {login, register, logout};
