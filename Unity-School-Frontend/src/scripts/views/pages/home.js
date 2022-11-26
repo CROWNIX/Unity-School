@@ -1,7 +1,7 @@
 const home = {
   async render() {
     return `
-        <h1>Hello World</h1>
+        <h1>Sekolah Di Jakarta Barat</h1>
     `;
   },
 
