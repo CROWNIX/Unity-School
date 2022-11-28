@@ -1,11 +1,11 @@
 const detail = {
-  async render() {
-    return `
+    async render() {
+        return `
           <h1>Detail</h1>
       `;
-  },
+    },
 
-  async afterRender() {},
+    async afterRender() {},
 };
 
 export default detail;
