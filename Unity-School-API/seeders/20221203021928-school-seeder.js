@@ -14,7 +14,7 @@ module.exports = {
        logoUrl: 'http://localhost:3000/images/schools/sman-33-jakarta/logo/logo.png',
        email: 'smanegeri33.jkt@gmail.com',
        image: 'hero_1.jpg',
-       imageUrl: 'http://localhost:3000/images/schools/sman-33-jakarta/hero/hero_1.jpg',
+       imageUrl: 'http://localhost:3000/images/schools/sman-33-jakarta/images/hero_1.jpg',
        noTelp: '0216191041',
        isActive: true
       },
