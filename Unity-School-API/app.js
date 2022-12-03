@@ -16,7 +16,7 @@ const fileupload = require('express-fileupload');
 
 app.use(express.static('public'));
 app.use(cookieParser());
-app.use(cors({credentials: true, origin: 'http://localhost:8080'}));
+app.use(cors({credentials: true, origin: 'http://localhost:9009'}));
 app.use(express.json({limit: '50mb'}));
 app.use(fileupload());
 app.use(express.urlencoded({limit: '50mb', extended: true}));

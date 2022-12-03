@@ -6,6 +6,7 @@ import './components/footer';
 import './components/content';
 import './components/hero';
 import './components/navbar';
+import './components/admin/navbarAdmin';
 import App from './views/app';
 import '../public/js/bootstrap.bundle.min';
 // import swRegister from './utils/sw-register';
