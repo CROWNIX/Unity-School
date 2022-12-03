@@ -171,14 +171,6 @@ const home = {
 </div>
 <!-- JavaScript Libraries -->
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-        <script>
-            const typed = new Typed(".auto-type", {
-                strings: ["Programmer", "Student", "Designer", "CEO"],
-                typeSpeed: 150,
-                backSpeed: 150,
-                loop: true,
-            })
-        </script>
         <script src="lib/wow/wow.min.js"></script>
         <script src="lib/easing/easing.min.js"></script>
         <script src="lib/waypoints/waypoints.min.js"></script>
@@ -191,7 +183,9 @@ const home = {
     `;
   },
 
-  async afterRender() {},
+  async afterRender() {
+
+  },
 };
 
 export default home;

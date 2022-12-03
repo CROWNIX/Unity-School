@@ -10,7 +10,7 @@ class HeroComponents extends HTMLElement {
                         <div class="row g-5 align-items-end">
                             <div class="col-lg-6 text-center text-lg-start">
                                 <div class="d-flex">
-                                    <h1 class="text-white mb-4 animated slideInDown title">I'am a <span class="auto-type text-warning"></span></h1>
+                                    <h1 class="text-white mb-4 animated slideInDown title">Menyediakan Informasi <span class="auto-type text-warning"></span></h1>
                                 </div>
                                 <p class="text-white pb-3 animated slideInDown">Tempor rebum no at dolore lorem clita rebum rebum ipsum rebum stet dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam sit justo amet ipsum vero ipsum clita lorem</p>
                                 <a href="" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Read More</a>
