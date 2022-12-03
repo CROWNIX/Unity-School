@@ -27,11 +27,19 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING,
                 defaultValue: 'default.jpg',
             },
+            logourl: {
+                type: DataTypes.STRING,
+                defaultValue: 'default.jpg',
+            },
             email: {
                 type: DataTypes.STRING,
                 unique: true,
             },
             image: {
+                type: DataTypes.STRING,
+                defaultValue: 'default.jpg',
+            },
+            imageUrl: {
                 type: DataTypes.STRING,
                 defaultValue: 'default.jpg',
             },
