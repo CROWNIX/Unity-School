@@ -1,23 +1,25 @@
 const {School, Activity, Facility, Achievment} = require('../models');
+const {Op} = require('sequelize');
 
 const getAllSchools = async (req, res) => {
+    const {search} = req.query;
+
     try {
-        const schools = await School.findAll({
-            include: [
-                {
-                    model: Activity,
-                    as: 'activities',
-                },
-                {
-                    model: Facility,
-                    as: 'facilities',
-                },
-                {
-                    model: Achievment,
-                    as: 'achievments',
-                },
-            ],
-        });
+        if(search){
+            const schools = await School.findAll({
+                where: {
+                    name: {
+                        [Op.like]: `%${search}%`
+                    }
+                }
+            });
+
+            if (schools.length) return res.status(200).json({schools});
+
+            return res.status(404).json({message: 'Sekolah tidak ditemukan'});
+        }
+
+        const schools = await School.findAll();
 
         if (schools.length) return res.status(200).json({schools});
 
