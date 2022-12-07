@@ -59,6 +59,33 @@ const schoolDetail = ({
     
   </section>
 </div>
+<div class="container py-5">
+  <h2 class="text-center mt-5 section-title text-secondary justify-content-center"><span></span>Review Sekolah<span></span></h2>
+  <section class="row justify-content-center">
+    <div class="col-md-8 border p-3 d-flex flex-column" id="reviews">
+      <div class="bg-white p-2 rounded col-md-9">
+        <span class="fw-bold">Rahmat</span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="row justify-content-center py-5">
+    <div class="col-md-8">
+      <form action="" method="post">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Masukan nama" name="name" required>
+          <label for="floatingInput">Nama</label>
+        </div>
+        <div class="form-floating mb-3">
+          <textarea class="form-control" placeholder="Masukan komentar" id="floatingTextarea" name="message"></textarea>
+          <label for="floatingTextarea">Komentar</label>
+        </div>
+        <button class="btn btn-primary">Kirim</button>
+      </form>
+    </div>
+  </section>
+</div>
 <!-- Facility End -->`;
 
 const schoolActivities = (activities) => {
