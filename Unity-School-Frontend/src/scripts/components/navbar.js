@@ -18,8 +18,8 @@ class NavbarComponents extends HTMLElement {
                         <div class="navbar-nav mx-auto py-0">
                             <a href="/#/home" class="nav-item nav-link active">Home</a>
                             <a href="/#/schools" class="nav-item nav-link">Sekolah</a>
-                            <a href="/#/contact" class="nav-item nav-link">Kontak</a>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="/#/favorite" class="nav-item nav-link">Favorite</a>
+                            <a href="/#/contact" class="nav-item nav-link">Contact</a>
                         </div>
                         <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get Started</a>
                     </div>

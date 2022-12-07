@@ -1,0 +1,45 @@
+/*!
+ * Isotope PACKAGED v3.0.5
+ *
+ * Licensed GPLv3 for open source use
+ * or Isotope Commercial License for commercial use
+ *
+ * https://isotope.metafizzy.co
+ * Copyright 2017 Metafizzy
+ */
+
+/*!
+ * Isotope v3.0.5
+ *
+ * Licensed GPLv3 for open source use
+ * or Isotope Commercial License for commercial use
+ *
+ * https://isotope.metafizzy.co
+ * Copyright 2017 Metafizzy
+ */
+
+/*!
+ * Masonry layout mode
+ * sub-classes Masonry
+ * https://masonry.desandro.com
+ */
+
+/*!
+ * Masonry v4.2.1
+ * Cascading grid layout library
+ * https://masonry.desandro.com
+ * MIT License
+ * by David DeSandro
+ */
+
+/*!
+ * Outlayer v2.1.0
+ * the brains and guts of a layout library
+ * MIT license
+ */
+
+/*!
+ * getSize v2.0.2
+ * measure size of elements
+ * MIT license
+ */
