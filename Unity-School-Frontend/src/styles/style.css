@@ -116,6 +116,10 @@ h6,
     color: var(--secondary) !important;
 }
 
+.nav-item.active{
+    color: var(--secondary) !important;
+}
+
 .navbar-light .navbar-brand h1 {
     color: #ffffff;
 }
@@ -173,6 +177,19 @@ h6,
 
     .sticky-top.navbar-light .navbar-brand h1 {
         color: var(--primary);
+    }
+
+    .detail-nav{
+        font-weight: 500;
+    }
+
+    .nav-item:hover{
+        color: #fba504 !important;
+    }
+
+    .nav-item{
+        color: var(--light) !important;
+        letter-spacing: 1px;
     }
 
     .navbar-light .navbar-nav .nav-item .dropdown-menu {
