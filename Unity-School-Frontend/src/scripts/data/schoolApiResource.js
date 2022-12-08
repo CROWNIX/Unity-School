@@ -20,6 +20,21 @@ class SchoolApiResource {
       return message;
     }
   }
+
+  static async createComment(review) {
+    try {
+      await fetch(API_ENDPOINT.createComment, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(review),
+      });
+      return true;
+    } catch ({message}) {
+      return message;
+    }
+  }
 }
 
 export default SchoolApiResource;

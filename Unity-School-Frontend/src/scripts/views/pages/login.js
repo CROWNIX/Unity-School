@@ -12,26 +12,15 @@ const login = {
             <div class="col-md-8">
               <div class="mb-4">
               <h3 class="mb-3">Sign In</h3>
-              <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
             </div>
-            <form action="#" method="post">
-              <div class="form-group first">
+            <form action="" method="post" id="formLogin">
+              <div class="form-group first mb-3">
                 <label for="username">Username</label>
                 <input type="text" class="form-control" id="username">
-
               </div>
               <div class="form-group last mb-4">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password">
-                
-              </div>
-              
-              <div class="d-flex mb-5 align-items-center">
-                <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
-                  <input type="checkbox" checked="checked"/>
-                  <div class="control__indicator"></div>
-                </label>
-                <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> 
+                <input type="password" class="form-control" id="password">   
               </div>
 
               <input type="submit" value="Log In" class="btn btn-block btn-primary">
@@ -61,7 +50,22 @@ const login = {
       `;
   },
 
-  async afterRender() {},
+  async afterRender() {
+    const formLogin = document.querySelector('#formLogin');
+    const username = document.querySelector('#username');
+    const password = document.querySelector('#password');
+
+    formLogin.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const data = {
+        username: username.value,
+        password: password.value,
+      };
+
+      console.log(data);
+    });
+  },
 };
 
 export default login;

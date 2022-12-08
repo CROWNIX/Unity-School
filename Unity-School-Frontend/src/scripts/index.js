@@ -4,6 +4,7 @@ import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import '../styles/bootstrap.min.css';
 import '../styles/style.css';
 import './components/footer';
+import './components/reviewCard';
 // import './components/form-reviews';
 import './components/content';
 import './components/hero';

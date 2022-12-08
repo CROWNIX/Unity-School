@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const restaurantCard = ({
   imageUrl, name, description, id,
 }) => {
@@ -7,16 +8,13 @@ const restaurantCard = ({
     newDescription = newDescription.substring(0, 110);
   }
 
-  return `<div class="col-md-4 mb-3">
-    <div class="card" style="width: 100%;">
-      <img class="lazyload card-img-top" src="./img/skeleton/Loading_icon.gif" data-src="${imageUrl}" alt="School Image">
-      
-      <div class="card-body">
-        <h5 class="card-title">${name}</h5>
-        <p class="card-text">${newDescription}...</p>
-        <a href="/#/schools/${id}" class="btn btn-primary">Detail</a>
+  return `<div class="col-md-4 wow fadeInUp mb-3" data-wow-delay="0.1s" onclick="window.location = '/#/schools/${id}'">
+      <div class="service-item d-flex flex-column text-center rounded">
+        <img class="lazyload card-img-top" src="./img/skeleton/Loading_icon.gif" data-src="${imageUrl}" alt="School Image">
+        <h5 class="mb-3 mt-3">${name}</h5>
+        <p class="m-0">${newDescription}...</p>
+        <a class="btn btn-square" href="/#/schools/${id}"><i class="fa fa-arrow-right"></i></a>
       </div>
-    </div>
   </div>`;
 };
 
@@ -62,26 +60,23 @@ const schoolDetail = ({
 <div class="container py-5">
   <h2 class="text-center mt-5 section-title text-secondary justify-content-center"><span></span>Review Sekolah<span></span></h2>
   <section class="row justify-content-center">
-    <div class="col-md-8 border p-3 d-flex flex-column" id="reviews">
-      <div class="bg-white p-2 rounded col-md-9">
-        <span class="fw-bold">Rahmat</span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
-      </div>
+    <div class="col-md-8 border p-3 d-flex flex-column" id="reviews" style="height: 280px; overflow-y: scroll;">
+ 
     </div>
   </section>
  
   <section class="row justify-content-center py-5">
     <div class="col-md-8">
-      <form action="" method="post">
+      <form action="" method="post" id="formReview">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Masukan nama" name="name" required>
-          <label for="floatingInput">Nama</label>
+          <input type="text" class="form-control" id="nameInput" placeholder="Masukan nama" name="name" required>
+          <label for="nameInput">Nama</label>
         </div>
         <div class="form-floating mb-3">
-          <textarea class="form-control" placeholder="Masukan komentar" id="floatingTextarea" name="message"></textarea>
-          <label for="floatingTextarea">Komentar</label>
+          <textarea class="form-control" placeholder="Masukan komentar" id="messageInput" name="message" required></textarea>
+          <label for="messageInput">Komentar</label>
         </div>
-        <button class="btn btn-primary">Kirim</button>
+        <button class="btn btn-primary" id="sendButton">Kirim</button>
       </form>
     </div>
   </section>
@@ -135,6 +130,29 @@ const schoolFacilities = (facilities) => {
   return facilitiesCard;
 };
 
+const schoolReviews = (comments) => {
+  let reviewsCard = '';
+
+  comments.forEach((comment) => {
+    reviewsCard += `<div class="bg-white px-2 pt-2   rounded col-md-9 mb-2">
+    <span class="fw-bold">${comment.username}</span>
+    <p>${comment.message}</p>
+  </div>`;
+  });
+
+  return reviewsCard;
+};
+
+const reviewCard = (name, message) => `<div class="bg-white px-2 pt-2   rounded col-md-9 mb-2">
+  <span class="fw-bold">${name}</span>
+  <p>${message}</p>
+</div>`;
+
+const emptyReviews = () => `<div class="d-flex justify-content-center">
+  <h4>Tidak ada review</h3>
+</div>`;
+
 export {
-  restaurantCard, schoolDetail, schoolActivities, schoolAchievments, schoolFacilities,
+  restaurantCard, schoolDetail, schoolActivities, schoolAchievments, schoolFacilities, schoolReviews,
+  emptyReviews, reviewCard,
 };

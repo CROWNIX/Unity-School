@@ -14,10 +14,10 @@ class NavbarAdminComponents extends HTMLElement {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              <a class="nav-link active" aria-current="page" href="/#/dashboard">Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">About</a>
+              <a class="nav-link" href="">Schools</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="">Projects</a>

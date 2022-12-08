@@ -1,6 +1,8 @@
 import SchoolApiResource from '../../data/schoolApiResource';
 import UrlParser from '../../routes/urlParser';
-import { schoolDetail, schoolActivities, schoolAchievments, schoolFacilities } from '../templates/templateCreator';
+import {
+  schoolDetail, schoolActivities, schoolAchievments, schoolFacilities, schoolReviews, emptyReviews,
+} from '../templates/templateCreator';
 
 const detail = {
   async render() {
@@ -33,15 +35,45 @@ const detail = {
   },
 
   async afterRender() {
-    const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const school = await SchoolApiResource.getSchoolById(url.id);
-    const schoolContainer = document.querySelector('#detailContent');
+    try {
+      const url = UrlParser.parseActiveUrlWithoutCombiner();
+      const schoolId = url.id;
+      const school = await SchoolApiResource.getSchoolById(schoolId);
+      const schoolContainer = document.querySelector('#detailContent');
 
-    schoolContainer.innerHTML = schoolDetail(school);
+      schoolContainer.innerHTML = schoolDetail(school);
 
-    this.renderActivities(school);
-    this.renderAchievments(school);
-    this.renderFacilities(school);
+      this.renderActivities(school);
+      this.renderAchievments(school);
+      this.renderFacilities(school);
+      this.rederReviews(school);
+
+      const formReview = document.querySelector('#formReview');
+      const nameInput = document.querySelector('#nameInput');
+      const messageInput = document.querySelector('#messageInput');
+
+      formReview.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const review = {
+          schoolId,
+          username: nameInput.value,
+          message: messageInput.value,
+        };
+
+        await SchoolApiResource.createComment(review);
+
+        const reviewContainer = document.querySelector('#reviews');
+
+        const reviewCard = document.createElement('review-card');
+        reviewCard.review = review;
+        reviewContainer.appendChild(reviewCard);
+
+        nameInput.value = '';
+        messageInput.value = '';
+      });
+    } catch (error) {
+      console.log(error);
+    }
   },
 
   renderActivities({ activities }) {
@@ -57,6 +89,16 @@ const detail = {
   renderFacilities({ facilities }) {
     const facilityContainer = document.querySelector('#facilities');
     facilityContainer.innerHTML = schoolFacilities(facilities);
+  },
+
+  rederReviews({ comments }) {
+    const reviewContainer = document.querySelector('#reviews');
+
+    if (comments.length) {
+      reviewContainer.innerHTML = schoolReviews(comments);
+    } else {
+      reviewContainer.innerHTML = emptyReviews();
+    }
   },
 };
 
