@@ -1,4 +1,4 @@
-const restaurantCard = ({
+const schoolCard = ({
   imageUrl, name, description, id,
 }) => {
   let newDescription = description;
@@ -7,26 +7,23 @@ const restaurantCard = ({
     newDescription = newDescription.substring(0, 110);
   }
 
-  return `<div class="col-md-4 mb-3">
-    <div class="card" style="width: 100%;">
-      <img class="lazyload card-img-top" src="./img/skeleton/Loading_icon.gif" data-src="${imageUrl}" alt="School Image">
-      
-      <div class="card-body">
-        <h5 class="card-title">${name}</h5>
-        <p class="card-text">${newDescription}...</p>
-        <a href="/#/schools/${id}" class="btn btn-primary">Detail</a>
-      </div>
-    </div>
-  </div>`;
+  return `<div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s" onClick="window.location='/#/schools/${id}';">
+  <div class="service-item d-flex flex-column text-center rounded">
+  <img class="lazyload card-img-top" src="./img/skeleton/Loading_icon.gif" data-src="${imageUrl}" alt="School Image">
+  <h5 class="card-title">${name}</h5>
+  <p class="card-text">${newDescription}...</p>
+      <a href="/#/schools/${id}" class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+  </div>
+</div>`;
 };
 
 const schoolDetail = ({
-  logoUrl, description, name, address, noTelp, imageUrl,
+  logourl, description, name, address, noTelp, imageUrl,
 }) => `<div class="container py-5">
   <h2 class="text-center mt-5 mb-5 section-title text-secondary justify-content-center"><span></span>Tentang Kami<span></span></h2>
   <section class="row pb-5">
     <div class="col-md-6 d-md-flex justify-content-center align-items-center d-none">
-      <img src="${logoUrl}" class="d-block" alt="Logo" height="250" width="250">
+      <img src="${logourl}" class="d-block" alt="Logo" height="250" width="250">
     </div>
     <div class="col-md-6">
       <p>${description}</p>
@@ -136,5 +133,5 @@ const schoolFacilities = (facilities) => {
 };
 
 export {
-  restaurantCard, schoolDetail, schoolActivities, schoolAchievments, schoolFacilities,
+  schoolCard, schoolDetail, schoolActivities, schoolAchievments, schoolFacilities,
 };
