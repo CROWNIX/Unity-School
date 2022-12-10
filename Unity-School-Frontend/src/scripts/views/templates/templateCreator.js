@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+
 const schoolCard = ({
   imageUrl, name, description, id,
 }) => {
@@ -19,7 +19,7 @@ const schoolCard = ({
 };
 
 const schoolDetail = ({
-  logoUrl, description, name, address, noTelp, imageUrl,
+  logourl, description, name, address, noTelp, imageUrl,
 }) => `<div class="container py-5">
   <h2 class="text-center mt-5 mb-5 section-title text-secondary justify-content-center"><span></span>Tentang Kami<span></span></h2>
   <section class="row pb-5">

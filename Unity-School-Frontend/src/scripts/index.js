@@ -5,7 +5,7 @@ import '../styles/bootstrap.min.css';
 import '../styles/style.css';
 import './components/footer';
 import './components/reviewCard';
-// import './components/form-reviews';
+import './components/form-contact';
 import './components/content';
 import './components/hero';
 import './components/navbar';

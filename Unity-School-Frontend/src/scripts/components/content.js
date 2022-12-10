@@ -5,34 +5,19 @@ class ContentComponents extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <div id="content" class="container-xxl py-5">
-                <div class="container py-5 px-lg-5">
-                    <div class="row g-4">
-                        <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="feature-item bg-light rounded text-center p-4">
-                                <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
-                                <h5 class="mb-3">Digital Marketing</h5>
-                                <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="feature-item bg-light rounded text-center p-4">
-                                <i class="fa fa-3x fa-search text-primary mb-4"></i>
-                                <h5 class="mb-3">SEO & Backlinks</h5>
-                                <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="feature-item bg-light rounded text-center p-4">
-                                <i class="fa fa-3x fa-laptop-code text-primary mb-4"></i>
-                                <h5 class="mb-3">Design & Development</h5>
-                                <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            `;
+    <section id="content-2" class="content-2">
+    <div class="container mt-5">
+      <div class="row" tabindex="0">
+      <div class="col-lg-6">
+            <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="../images/logo/schoolUnity.png">
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center aos-init aos-animate" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
+          <h1 class=" font-weight-bold mb-4 h1-beranda">Apa sih itu UnitySchool?</h1>
+          <p class="container">Di Jakarta terdapat 494 sekolah SMA negeri maupun swasta (Kemdikbud, 2022). Sebelum dilaksanakannya PPDB Jakarta bulan Juli lalu. Banyak orang tua mencari informasi sekolah-sekolah yang ada di Jakarta. Namun para orang tua seringkali kebingungan mencari informasi sekolah tersebut.  Salah satu faktornya adalah jika mereka ingin mencari informasi lebih dari satu sekolah, mereka harus berpindah-pindah website. sayangnya banyak calon siswa yang menyesal ketika sudah masuk sekolah tersebut karena sering terjadi pembullyan, dll. Oleh karena itu dibutuhkan sebuah sistem yang menggabungkan semua informasi sekolah SMA di Jakarta dan menampilkan review sekolah tersebut dari para alumni, warga sekitar, dll untuk memberikan ulasan mereka.</p>
+        </div>
+      </div>
+    </div>
+  </section>`;
   }
 }
 
