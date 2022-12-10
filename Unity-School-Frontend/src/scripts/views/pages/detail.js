@@ -23,24 +23,86 @@ const detail = {
     </div>
   </nav>
 <div>
-  <img src="./img/hero_1.jpg" class="d-block w-100" alt="..." height="500">
+  <img src="" class="d-block w-100" alt="..." height="500" id="heroImage">
 </div>
 <main id="detailContent">
     
 </main>
+<div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+<div class="container py-5 px-lg-5">
+    <div class="row g-5">
+        <div class="col-md-6">
+            <p class="section-title text-white h5 mb-4">Alamat<span></span></p>
+            <p><i class="fa fa-map-marker-alt me-3"></i> <span  id="address"></span></p>
+            <p><i class="fa fa-phone-alt me-3"></i><span id="noTelp"></span></p>
+            <p><i class="fa fa-envelope me-3"></i><span id="email"></span></p>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
       `;
   },
 
   async afterRender() {
-    const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const school = await SchoolApiResource.getSchoolById(url.id);
-    const schoolContainer = document.querySelector('#detailContent');
+    try {
+      const url = UrlParser.parseActiveUrlWithoutCombiner();
+      const schoolId = url.id;
+      const school = await SchoolApiResource.getSchoolById(schoolId);
+      const schoolContainer = document.querySelector('#detailContent');
+      const heroImage = document.querySelector('#heroImage');
+      const address = document.querySelector('#address');
+      const noTelp = document.querySelector('#noTelp');
+      const email = document.querySelector('#email');
 
-    schoolContainer.innerHTML = templateCreator.schoolDetail(school);
+      heroImage.src = school.imageUrl;
+      address.textContent = school.address;
+      noTelp.textContent = school.noTelp;
+      email.textContent = school.email;
 
-    this.renderActivities(school);
-    this.renderAchievments(school);
-    this.renderFacilities(school);
+      schoolContainer.innerHTML = schoolDetail(school);
+
+      this.renderActivities(school);
+      this.renderAchievments(school);
+      this.renderFacilities(school);
+      this.rederReviews(school);
+
+
+      const formReview = document.querySelector('#formReview');
+      const nameInput = document.querySelector('#nameInput');
+      const messageInput = document.querySelector('#messageInput');
+      schoolContainer.innerHTML = templateCreator.schoolDetail(school);
+
+
+      formReview.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const review = {
+          schoolId,
+          username: nameInput.value,
+          message: messageInput.value,
+        };
+
+        await SchoolApiResource.createComment(review);
+
+        const reviewContainer = document.querySelector('#reviews');
+
+        const reviewCard = document.createElement('review-card');
+        reviewCard.review = review;
+        reviewContainer.appendChild(reviewCard);
+
+        nameInput.value = '';
+        messageInput.value = '';
+      });
+    } catch (error) {
+      console.log(error);
+    }
   },
 
   renderActivities({ activities }) {
@@ -56,6 +118,16 @@ const detail = {
   renderFacilities({ facilities }) {
     const facilityContainer = document.querySelector('#facilities');
     facilityContainer.innerHTML = templateCreator.schoolFacilities(facilities);
+  },
+
+  rederReviews({ comments }) {
+    const reviewContainer = document.querySelector('#reviews');
+
+    if (comments.length) {
+      reviewContainer.innerHTML = schoolReviews(comments);
+    } else {
+      reviewContainer.innerHTML = emptyReviews();
+    }
   },
 };
 

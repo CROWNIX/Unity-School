@@ -1,4 +1,4 @@
-const {School, Activity, Facility, Achievment} = require('../models');
+const {School, Activity, Facility, Achievment, Comment} = require('../models');
 const {Op} = require('sequelize');
 
 const getAllSchools = async (req, res) => {
@@ -47,6 +47,10 @@ const getSchoolById = async (req, res) => {
                 {
                     model: Achievment,
                     as: 'achievments',
+                },
+                {
+                    model: Comment,
+                    as: 'comments',
                 },
             ],
         });

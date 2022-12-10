@@ -2,6 +2,7 @@ const {validationResult} = require('express-validator');
 const {Comment} = require('../models');
 
 const createComment = async (req, res) => {
+    console.log('api masuk');
     const {schoolId, username, message} = req.body;
     const errors = validationResult(req);
 

@@ -4,7 +4,7 @@ const {check} = require('express-validator');
 const {login, register, logout} = require('../controllers/authController');
 
 router.post('/login', [
-    check('username', 'Username tidak boleh kosong').trim().isLength({min: 1}), 
+    check('password', 'Password tidak boleh kosong').trim().isLength({min: 1}), 
     check('email', 'Email tidak boleh kosong').trim().isLength({min: 1}), 
 ],login);
 router.post('/register', [
