@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING,
                 defaultValue: 'default.jpg',
             },
-            logourl: {
+            logoUrl: {
                 type: DataTypes.STRING,
                 defaultValue: 'default.jpg',
             },

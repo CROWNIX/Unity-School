@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-const restaurantCard = ({
+const schoolCard = ({
   imageUrl, name, description, id,
 }) => {
   let newDescription = description;
@@ -10,7 +10,7 @@ const restaurantCard = ({
 
   return `<div class="col-md-4 wow fadeInUp mb-3" data-wow-delay="0.1s" onclick="window.location = '/#/schools/${id}'">
       <div class="service-item d-flex flex-column text-center rounded">
-        <img class="lazyload card-img-top" src="./img/skeleton/Loading_icon.gif" data-src="${imageUrl}" alt="School Image">
+        <img class="lazyload card-img-top" src="./img/skeleton/Loading_icon.gif" data-src="${imageUrl}" alt="School Image" height="230">
         <h5 class="mb-3 mt-3">${name}</h5>
         <p class="m-0">${newDescription}...</p>
         <a class="btn btn-square" href="/#/schools/${id}"><i class="fa fa-arrow-right"></i></a>
@@ -23,10 +23,10 @@ const schoolDetail = ({
 }) => `<div class="container py-5">
   <h2 class="text-center mt-5 mb-5 section-title text-secondary justify-content-center"><span></span>Tentang Kami<span></span></h2>
   <section class="row pb-5">
-    <div class="col-md-6 d-md-flex justify-content-center align-items-center d-none">
-      <img src="${logoUrl}" class="d-block" alt="Logo" height="250" width="250">
+    <div class="col-md-6 d-md-flex justify-content-center align-items-center d-none animated slideInLeft">
+      <img class="lazyload d-block" src="./img/skeleton/Loading_icon.gif" data-src="${logoUrl}" alt="Logo sekolah" height="250" width="250">
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 animated slideInRight">
       <p>${description}</p>
     </div>
   </section>
@@ -87,10 +87,10 @@ const schoolActivities = (activities) => {
   let activitiesCard = '';
 
   activities.forEach((activity) => {
-    activitiesCard += `<div class="col-md-4 mb-3">
+    activitiesCard += `<div class="col-md-4 mb-3 wow fadeInUp" data-wow-delay="0.1s">
     <div class="card rounded" style="width: 100%;">
       <span class="text-white position-absolute px-3 py-2 w-100" style="background-color: rgba(0, 0, 0, 0.8)">${activity.name}</span>
-      <img src="${activity.imageUrl}" class="card-img-top" alt="Kegiatan sekolah" height="230">
+      <img class="lazyload card-img-top" src="./img/skeleton/Loading_icon.gif" data-src="${activity.imageUrl}" alt="Kegiatan sekolah" height="230">
     </div>
   </div>`;
   });
@@ -102,10 +102,10 @@ const schoolAchievments = (achievments) => {
   let achievmentsCard = '';
 
   achievments.forEach((achievment) => {
-    achievmentsCard += `<div class="col-md-4 mb-3">
+    achievmentsCard += `<div class="col-md-4 mb-3 wow fadeInUp" data-wow-delay="0.1s">
     <div class="card rounded" style="width: 100%;">
       <span class="text-white position-absolute px-3 py-2 w-100 bottom-0" style="background-color: rgba(0, 0, 0, 0.8)">${achievment.name}<br>${achievment.level}</span>
-      <img src="${achievment.imageUrl}" class="card-img-top" alt="Prestasi sekolah" height="230">
+      <img class="lazyload card-img-top" src="./img/skeleton/Loading_icon.gif" data-src="${achievment.imageUrl}" alt="Prestasi sekolah" height="230">
     </div>
   </div>`;
   });
@@ -117,9 +117,9 @@ const schoolFacilities = (facilities) => {
   let facilitiesCard = '';
 
   facilities.forEach((facility) => {
-    facilitiesCard += `<div class="col-md-4 mb-3">
+    facilitiesCard += `<div class="col-md-4 mb-3 wow fadeInUp" data-wow-delay="0.1s">
     <div class="card" style="width: 100%">
-    <img src="${facility.imageUrl}" class="card-img-top" alt="Fasilitas sekolah">
+    <img class="lazyload card-img-top" src="./img/skeleton/Loading_icon.gif" data-src="${facility.imageUrl}" alt="Fasilitas sekolah" height="230">
       <div class="card-body">
         <p class="card-text">Total : ${facility.total}</p>
       </div>
@@ -153,6 +153,6 @@ const emptyReviews = () => `<div class="d-flex justify-content-center">
 </div>`;
 
 export {
-  restaurantCard, schoolDetail, schoolActivities, schoolAchievments, schoolFacilities, schoolReviews,
+  schoolCard, schoolDetail, schoolActivities, schoolAchievments, schoolFacilities, schoolReviews,
   emptyReviews, reviewCard,
 };

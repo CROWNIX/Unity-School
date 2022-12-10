@@ -1,5 +1,5 @@
 import SchoolApiResource from '../../data/schoolApiResource';
-import { restaurantCard } from '../templates/templateCreator';
+import { schoolCard } from '../templates/templateCreator';
 
 const schools = {
   async render() {
@@ -9,9 +9,9 @@ const schools = {
         <div class="container px-lg-5">
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                  <form action="">
+                  <form action="" id="searchForm">
                     <div class="input-group mb-3">
-                      <input type="search" class="form-control" placeholder="Cari Sekolah..." aria-label="Cari sekolah...">
+                      <input type="search" class="form-control" placeholder="Cari Sekolah..." aria-label="Cari sekolah..." name="search" id="searchInput">
                       <button class="btn btn-warning" type="submit" id="searchButton">Search</button>
                     </div> 
                   </form> 
@@ -34,13 +34,30 @@ const schools = {
     try {
       const listSchools = await SchoolApiResource.getALlSchools();
       const schoolsContainer = document.querySelector('#listSchools');
+      const searchForm = document.querySelector('#searchForm');
+      const searchInput = document.querySelector('#searchInput');
 
       let cards = '';
       listSchools.forEach((school) => {
-        cards += restaurantCard(school);
+        cards += schoolCard(school);
       });
 
       schoolsContainer.innerHTML = cards;
+
+      searchForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        console.log('masuk');
+
+        const searchSchools = await SchoolApiResource.searchSchools(searchInput.value);
+        console.log(searchSchools);
+
+        let schoolCards = '';
+        searchSchools.forEach((school) => {
+          schoolCards += schoolCard(school);
+        });
+
+        schoolsContainer.innerHTML = schoolCards;
+      });
     } catch (error) {
       console.log(error);
     }

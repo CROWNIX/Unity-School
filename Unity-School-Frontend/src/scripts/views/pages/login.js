@@ -1,3 +1,5 @@
+import SchoolApiResource from '../../data/schoolApiResource';
+
 const login = {
   async render() {
     return `
@@ -15,12 +17,12 @@ const login = {
             </div>
             <form action="" method="post" id="formLogin">
               <div class="form-group first mb-3">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" id="username">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Masukan email" required>
               </div>
               <div class="form-group last mb-4">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password">   
+                <input type="password" class="form-control" id="password" placeholder="Masukan password" required>   
               </div>
 
               <input type="submit" value="Log In" class="btn btn-block btn-primary">
@@ -51,20 +53,20 @@ const login = {
   },
 
   async afterRender() {
-    const formLogin = document.querySelector('#formLogin');
-    const username = document.querySelector('#username');
-    const password = document.querySelector('#password');
+    try {
+      const formLogin = document.querySelector('#formLogin');
+      const email = document.querySelector('#email');
+      const password = document.querySelector('#password');
 
-    formLogin.addEventListener('submit', (e) => {
-      e.preventDefault();
+      formLogin.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-      const data = {
-        username: username.value,
-        password: password.value,
-      };
-
-      console.log(data);
-    });
+        const loginInfo = await SchoolApiResource.login(email.value, password.value);
+        console.log(loginInfo);
+      });
+    } catch (error) {
+      console.log('error');
+    }
   },
 };
 

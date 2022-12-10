@@ -16,7 +16,17 @@ class SchoolApiResource {
       const response = await fetch(API_ENDPOINT.getSchoolById(id));
       const { school } = await response.json();
       return school;
-    } catch ({message}) {
+    } catch ({ message }) {
+      return message;
+    }
+  }
+
+  static async searchSchools(keyword) {
+    try {
+      const response = await fetch(API_ENDPOINT.searchSchools(keyword));
+      const { schools } = await response.json();
+      return schools;
+    } catch ({ message }) {
       return message;
     }
   }
@@ -31,8 +41,28 @@ class SchoolApiResource {
         body: JSON.stringify(review),
       });
       return true;
-    } catch ({message}) {
+    } catch ({ message }) {
       return message;
+    }
+  }
+
+  static async login(email, password) {
+    try {
+      const test = await fetch(API_ENDPOINT.login, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      });
+
+      return test;
+    } catch (error) {
+      console.log('error');
+      return error;
     }
   }
 }
