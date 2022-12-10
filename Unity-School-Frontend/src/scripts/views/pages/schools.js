@@ -1,5 +1,5 @@
 import SchoolApiResource from '../../data/schoolApiResource';
-import { restaurantCard } from '../templates/templateCreator';
+import { schoolCard } from '../templates/templateCreator';
 
 const schools = {
   async render() {
@@ -37,7 +37,7 @@ const schools = {
 
       let cards = '';
       listSchools.forEach((school) => {
-        cards += restaurantCard(school);
+        cards += schoolCard(school);
       });
 
       schoolsContainer.innerHTML = cards;
