@@ -67,19 +67,16 @@ const detail = {
       noTelp.textContent = school.noTelp;
       email.textContent = school.email;
 
-      schoolContainer.innerHTML = schoolDetail(school);
+      schoolContainer.innerHTML = templateCreator.schoolDetail(school);
 
       this.renderActivities(school);
       this.renderAchievments(school);
       this.renderFacilities(school);
       this.rederReviews(school);
 
-
       const formReview = document.querySelector('#formReview');
       const nameInput = document.querySelector('#nameInput');
       const messageInput = document.querySelector('#messageInput');
-      schoolContainer.innerHTML = templateCreator.schoolDetail(school);
-
 
       formReview.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -124,9 +121,9 @@ const detail = {
     const reviewContainer = document.querySelector('#reviews');
 
     if (comments.length) {
-      reviewContainer.innerHTML = schoolReviews(comments);
+      reviewContainer.innerHTML = templateCreator.schoolReviews(comments);
     } else {
-      reviewContainer.innerHTML = emptyReviews();
+      reviewContainer.innerHTML = templateCreator.emptyReviews();
     }
   },
 };
