@@ -20,76 +20,35 @@ const home = {
     </div>
     <!-- Facts End -->
 
-
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container py-5 px-lg-5">
-            <div class="wow fadeInUp" data-wow-delay="0.1s">
-                <p class="section-title text-secondary justify-content-center"><span></span>Our Services<span></span></p>
-                <h1 class="text-center mb-5">What Solutions We Provide</h1>
-            </div>
+        <div class="wow fadeInUp" data-wow-delay="0.1s">
+                        <p class="section-title text-secondary justify-content-center"><span></span>Our Services<span></span></p>
+                        <h1 class="text-center mb-5">Yang Kami Berikan</h1>
+                    </div>
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex flex-column text-center rounded">
-                        <div class="service-icon flex-shrink-0">
-                            <i class="fa fa-search fa-2x"></i>
-                        </div>
-                        <h5 class="mb-3">SEO Optimization</h5>
-                        <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column text-center rounded">
-                        <div class="service-icon flex-shrink-0">
-                            <i class="fa fa-laptop-code fa-2x"></i>
-                        </div>
-                        <h5 class="mb-3">Web Design</h5>
-                        <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item d-flex flex-column text-center rounded">
-                        <div class="service-icon flex-shrink-0">
-                            <i class="fab fa-facebook-f fa-2x"></i>
-                        </div>
-                        <h5 class="mb-3">Social Media Marketing</h5>
-                        <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex flex-column text-center rounded">
-                        <div class="service-icon flex-shrink-0">
-                            <i class="fa fa-mail-bulk fa-2x"></i>
-                        </div>
-                        <h5 class="mb-3">Email Marketing</h5>
-                        <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column text-center rounded">
-                        <div class="service-icon flex-shrink-0">
-                            <i class="fa fa-thumbs-up fa-2x"></i>
-                        </div>
-                        <h5 class="mb-3">PPC Advertising</h5>
-                        <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item d-flex flex-column text-center rounded">
-                        <div class="service-icon flex-shrink-0">
-                            <i class="fab fa-android fa-2x"></i>
-                        </div>
-                        <h5 class="mb-3">App Development</h5>
-                        <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+    <div class="col-md-4 wow fadeInUp mb-3" data-wow-delay="0.1s">
+            <div class="service-item d-flex flex-column text-center rounded">
+            <img class="lazyload card-img-top" src="./img/skeleton/Loading_icon.gif" data-src="../images/logo/Fasilitas.jpg" alt="School Image" height="230">
+            <h5 class="mb-3 mt-3">Fasilitas</h5>
+            <p class="m-0">Fasilitas Sekolah merupakan berbagai macam sarana dan prasarana yang diberikan oleh sekolah yang dapat dimanfaatkan secara baik oleh siswa/i untuk mengembangkan minat dan bakatnya, selain itu juga fasilitas sekolah juga merupakan sesuatu hal yang dapat digunakan sebagai sarana untuk mengembangkan prestasi siswa.</p>
+        </div>
+     </div>
+    <div class="col-md-4 wow fadeInUp mb-3" data-wow-delay="0.1s">
+            <div class="service-item d-flex flex-column text-center rounded">
+            <img class="lazyload card-img-top" src="./img/skeleton/Loading_icon.gif" data-src="../images/logo/Kegiatan.jpg" alt="School Image" height="230">
+            <h5 class="mb-3 mt-3">Kegiatan</h5>
+            <p class="m-0">Kegiatan utama di lembaga ini adalah penyelenggaraan proses belajar dan mengajar, di ruang kelas maupun luar ruang kelas. Bentuk pelaksanaannya berupa kegiatan intrakurikuler dan ekstrakurikuler. Kegiatan intrakurikuler merupakan kegiatan belajar tatap muka dalam alokasi waktu yang sudah diatur dalam struktur dan muatan kurikulum. Kegiatan ekstrakurikuler merupakan kegiatan penunjang pembelajaran yang dilaksanakan di luar jam tatap muka.</p>
+        </div>
+     </div>
+    <div class="col-md-4 wow fadeInUp mb-3" data-wow-delay="0.1s">
+            <div class="service-item d-flex flex-column text-center rounded">
+            <img class="lazyload card-img-top" src="./img/skeleton/Loading_icon.gif" data-src="../images/logo/Prestasi.jpg" alt="School Image" height="230">
+            <h5 class="mb-3 mt-3">Prestasi</h5>
+            <p class="m-0">Prestasi Belajar Siswa tidak  dapat  dipisahkan  dari  kegiatan  belajar, karena  belajar  merupakan  suatu  proses,  sedangkan  prestasi  belajar adalah  hasil  dari  proses  pembelajaran  tersebut.  Bagi  seorang  anak belajar  merupakan  suatu  kewajiban.  Berhasil  atau  tidaknya  seorang anak dalam pendidikan  tergantung  pada  proses  belajar  yang  dialami oleh anak tersebut.</p>
+        </div>
+     </div>
         </div>
     </div>
     <!-- Service End -->
