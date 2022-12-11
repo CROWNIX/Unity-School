@@ -51,10 +51,8 @@ const schools = {
 
       searchForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        console.log('masuk');
 
         const searchSchools = await SchoolApiResource.searchSchools(searchInput.value);
-        console.log(searchSchools);
 
         let schoolCards = '';
         searchSchools.forEach((school) => {

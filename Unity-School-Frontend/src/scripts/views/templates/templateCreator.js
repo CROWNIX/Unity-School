@@ -1,4 +1,3 @@
-
 const schoolCard = ({
   imageUrl, name, description, id,
 }) => {
