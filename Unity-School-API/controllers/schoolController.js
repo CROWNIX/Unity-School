@@ -14,9 +14,7 @@ const getAllSchools = async (req, res) => {
                 }
             });
 
-            if (schools.length) return res.status(200).json({schools});
-
-            return res.status(404).json({message: 'Sekolah tidak ditemukan'});
+            return res.status(200).json({schools});
         }
 
         const schools = await School.findAll();
