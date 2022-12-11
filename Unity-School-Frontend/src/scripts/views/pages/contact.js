@@ -52,14 +52,14 @@ const contact = {
         <div class="text-center border-bottom p-4">
             <img class=" rounded-circle mb-4" src="https://jasanya.tech/storage/imgTeam/bangRahmat.jpg" alt="" style="height: 13rem; width: 12rem; object-fit:cover; ">
             <h6 style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">Rahmat Fauzi Widianto</h6>
-            <p style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">Full Stack</p>
+            <p style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">Backendk</p>
         </div>
         <div class="d-flex justify-content-center p-4">
             <div class="">
                 <a class="btn shadow btn-square mx-1 bg-dark" href="https://github.com/CROWNIX/" target="_blank"><i class="fab fa-github text-white"></i></a>
             </div>
             <div class="">
-              <a class="btn shadow btn-square mx-1 bg-info" href="https://www.linkedin.com/in/wildan-beckham-surtanik-2b08491b2" target="_blank"><i class="fab fa-linkedin-in text-white"></i></a>
+              <a class="btn shadow btn-square mx-1 bg-info" href="https://www.linkedin.com/mwlite/in/rahmat-fauzi-widianto-b66b66255" target="_blank"><i class="fab fa-linkedin-in text-white"></i></a>
           </div>
             <div class="d-none">
                 <a class="btn shadow btn-square mx-1 medium-icon" href="" target="_blank"><i class="fab fa-medium-m"></i></a>
@@ -70,16 +70,16 @@ const contact = {
 <div class="wow fadeInUp" style="cursor: pointer; visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;" data-wow-delay="0.1s">
   <div class="shadow hover-scale-1 team-item bg-light rounded mb-sm-3 mb-3">
       <div class="text-center border-bottom p-4">
-          <img class=" rounded-circle mb-4" src="https://jasanya.tech/storage/imgTeam/bangWildan.jpeg" alt="" style="height: 13rem; width: 12rem; object-fit:cover; ">
-          <h6 style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">Wildan B Surtanik</h6>
-          <p style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">Front End</p>
+          <img class=" rounded-circle mb-4" src="../images/Photo/Fikri.jpeg" alt="" style="height: 13rem; width: 12rem; object-fit:cover; ">
+          <h6 style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">Muhammad Riyadi Al Fikri </h6>
+          <p style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">Frontend</p>
       </div>
       <div class="d-flex justify-content-center p-4">
           <div class="">
-              <a class="btn shadow btn-square mx-1 bg-dark" href="https://github.com/wildanbeckham/" target="_blank"><i class="fab fa-github text-white"></i></a>
+              <a class="btn shadow btn-square mx-1 bg-dark" href="https://github.com/Fikrii2210" target="_blank"><i class="fab fa-github text-white"></i></a>
           </div>
           <div class="">
-              <a class="btn shadow btn-square mx-1 bg-info" href="https://www.linkedin.com/in/wildan-beckham-surtanik-2b08491b2" target="_blank"><i class="fab fa-linkedin-in text-white"></i></a>
+              <a class="btn shadow btn-square mx-1 bg-info" href="https://www.linkedin.com/in/muhammad-riyadhi-al-fikri-65b790237/" target="_blank"><i class="fab fa-linkedin-in text-white"></i></a>
           </div>
           <div class="d-none">
               <a class="btn shadow btn-square mx-1 medium-icon" href="" target="_blank"><i class="fab fa-medium-m"></i></a>
@@ -90,16 +90,16 @@ const contact = {
 <div class="wow fadeInUp" style="cursor: pointer; visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;" data-wow-delay="0.1s">
   <div class="shadow hover-scale-1 team-item bg-light rounded mb-sm-3 mb-3">
       <div class="text-center border-bottom p-4">
-          <img class=" rounded-circle mb-4" src="https://jasanya.tech/storage/imgTeam/bangWildan.jpeg" alt="" style="height: 13rem; width: 12rem; object-fit:cover; ">
-          <h6 style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">Wildan B Surtanik</h6>
-          <p style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">Front End</p>
+          <img class=" rounded-circle mb-4" src="../images/Photo/Galih.jpeg" alt="" style="height: 13rem; width: 12rem; object-fit:cover; ">
+          <h6 style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">Galih Qoirul Amark</h6>
+          <p style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">UI/UX</p>
       </div>
       <div class="d-flex justify-content-center p-4">
           <div class="">
-              <a class="btn shadow btn-square mx-1 bg-dark" href="https://github.com/wildanbeckham/" target="_blank"><i class="fab fa-github text-white"></i></a>
+              <a class="btn shadow btn-square mx-1 bg-dark" href="https://github.com/Galiheee" target="_blank"><i class="fab fa-github text-white"></i></a>
           </div>
           <div class="">
-              <a class="btn shadow btn-square mx-1 bg-info" href="https://www.linkedin.com/in/wildan-beckham-surtanik-2b08491b2" target="_blank"><i class="fab fa-linkedin-in text-white"></i></a>
+              <a class="btn shadow btn-square mx-1 bg-info" href="https://www.linkedin.com/in/galiheee/" target="_blank"><i class="fab fa-linkedin-in text-white"></i></a>
           </div>
           <div class="d-none">
               <a class="btn shadow btn-square mx-1 medium-icon" href="" target="_blank"><i class="fab fa-medium-m"></i></a>
@@ -110,16 +110,16 @@ const contact = {
 <div class="wow fadeInUp" style="cursor: pointer; visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;" data-wow-delay="0.1s">
   <div class="shadow hover-scale-1 team-item bg-light rounded mb-sm-3 mb-3">
       <div class="text-center border-bottom p-4">
-          <img class=" rounded-circle mb-4" src="https://jasanya.tech/storage/imgTeam/bangWildan.jpeg" alt="" style="height: 13rem; width: 12rem; object-fit:cover; ">
-          <h6 style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">Wildan B Surtanik</h6>
-          <p style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">Front End</p>
+          <img class=" rounded-circle mb-4" src="../images/Photo/Riky.jpeg" alt="" style="height: 13rem; width: 12rem; object-fit:cover; ">
+          <h6 style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">Riky Jhordi Sagala</h6>
+          <p style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">Frontend</p>
       </div>
       <div class="d-flex justify-content-center p-4">
           <div class="">
-              <a class="btn shadow btn-square mx-1 bg-dark" href="https://github.com/wildanbeckham/" target="_blank"><i class="fab fa-github text-white"></i></a>
+              <a class="btn shadow btn-square mx-1 bg-dark" href="https://github.com/rikyjhordi" target="_blank"><i class="fab fa-github text-white"></i></a>
           </div>
           <div class="">
-              <a class="btn shadow btn-square mx-1 bg-info" href="https://www.linkedin.com/in/wildan-beckham-surtanik-2b08491b2" target="_blank"><i class="fab fa-linkedin-in text-white"></i></a>
+              <a class="btn shadow btn-square mx-1 bg-info" href="https://www.linkedin.com/in/rikyjho/" target="_blank"><i class="fab fa-linkedin-in text-white"></i></a>
           </div>
           <div class="d-none">
               <a class="btn shadow btn-square mx-1 medium-icon" href="" target="_blank"><i class="fab fa-medium-m"></i></a>

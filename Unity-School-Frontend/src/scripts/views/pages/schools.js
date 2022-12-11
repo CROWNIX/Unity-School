@@ -8,6 +8,7 @@ const schools = {
       <div class="container-xxl bg-primary hero-header">
         <div class="container px-lg-5">
             <div class="row justify-content-center">
+          <h1 class="text-white animated slideInDown text-center">Temukan Informasi Sekolah di seluruh Jakarta</h1><br><br><br><br><br>
                 <div class="col-md-6">
                   <form action="" id="searchForm">
                     <div class="input-group mb-3">
@@ -27,6 +28,10 @@ const schools = {
           </div>
         </div>
       </main>
+
+      <!-- Footer Start -->
+      <foo-ter></foo-ter>
+  <!-- Footer End -->
   `;
   },
 
