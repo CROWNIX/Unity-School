@@ -12,7 +12,7 @@ class HeroComponents extends HTMLElement {
                                 <div class="d-flex">
                                   <h1 class="text-white mb-4 animated slideInDown title">Unity school <span class="auto-type text-warning"></span></h1>
                                 </div>
-                                <h2 class="text-white pb-3 animated slideInDown">Penyedia informasi sekolah yang berkualitas, karena masa depan pembelajaran yang lebih baik dimulai di sini!</h2>
+                                <h4 class="text-white pb-3 animated slideInDown">Penyedia informasi sekolah yang berkualitas, karena masa depan pembelajaran yang lebih baik dimulai di sini!</h4>
                                 <a href="#content-2" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Selengkapnya</a>
                             </div>
                             <div class="col-lg-6 text-center text-lg-start">

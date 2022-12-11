@@ -67,7 +67,7 @@ const detail = {
       noTelp.textContent = school.noTelp;
       email.textContent = school.email;
 
-      schoolContainer.innerHTML = schoolDetail(school);
+      schoolContainer.innerHTML = templateCreator.schoolDetail(school);
 
       this.renderActivities(school);
       this.renderAchievments(school);
