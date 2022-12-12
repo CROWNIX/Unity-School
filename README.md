@@ -22,64 +22,67 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## Peduli Gizi
+## Unity School
 
 
-Aplikasi yang membantu anda mencukupi gizi sehari-hari
+Penyedia informasi sekolah yang berkualitas, karena masa depan pembelajaran yang lebih baik dimulai di sini!
 
 
 
 ### Built With
 
-Peduli Gizi dibuat dengan 
+Unity School dibuat dengan 
 
-* [Laravel](https://laravel.com/)
-* [Tailwindcss](https://tailwindcss.com/)
+* [HTML](https://www.w3schools.com/html/)
+* [CSS](https://www.w3schools.com/css/)
+* [Javascript](https://www.w3schools.com/js/)
+* [Node Js](https://nodejs.org)
+* [Express Js](https://expressjs.com)
 * [Mysql](https://mysql.com/)
-
-### Library
-
-Peduli Gizi Menggunakan Library
-* [Swipper.js](https://swiperjs.com/)
-* [Google Font](https://fonts.google.com/)
-* [Jquery](https://jquery.com/)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-## Installation
-
-Clone Repository
-
+## Cloning Repository
+Silahkan cloning repository terlebih dahulu dengan cara buka terminal git lalu ketikan perintah berikut
 ```bash
   git clone https://github.com/CROWNIX/Peduli-Gizi.git
-  cd Peduli-Gizi
-```
-Install Vendor
-```bash
-  composer install
-```
-Setelah itu buatlah database di phpmyadmin peduli-gizi, sesuaikan dengan yang ada di environment. Jika sudah buka lagi terminal lalu jalankan migrate dengan perintah berikut
-```bash
-  php artisan migrate
 ```
 
+## Installasi Backend
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Setelah proses installasi selesai. jalankan server dengan perintah berikut
+Setelah proses cloning selesai silahkan masukan dua perintah berikut untuk masuk ke folder yang sudah di cloning tadi
 
 ```bash
-  php artisan serve
+  cd Unity-School
+  cd Unity-School-API
+```
+Setelah itu install package dengan mengetikan perintah berikut
+```bash
+  npm install
+```
+Pastikan sudah mengintall nodemon secara global, jika belum ketikan perintah berikut di terminal
+```bash
+  npm install -g nodemon
+```
+Setelah proses installasi package selesai, Silahkan nyalakan xampp nya dan buat database di phpmyadmin dengan nama `School` Setelah dibuat, kembali lagi ke terminal dan ketikan dua perintah berikut
+```bash
+  npm run migrate
+  npm run seed
+```
+Setelah itu jalankan server dengan mengetikan perintah :
+```bash
+  npm run dev
 ```
 
-Env google
-
+## Installasi Frontend
+Setelah proses instalasi backend selesai, install terlebih dahulu package yang dibutuhkan frontend. Caranya buat lagi terminal baru dan masuk ke dalam folder `Unity-School` seperti diatas dan masuk ke directory frontend dengan cara `cd Unity-School-Frontend`. Setelah itu jalankan perintah berikut untuk mengintall package: 
 ```bash
-  GOOGLE_CLIENT_ID = 531679190409-4s79pdaaq5fs45ooi5baos14juvu2ddu.apps.googleusercontent.com
-  GOOGLE_CLIENT_SECRET = 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
+  npm install
+```
+Setelah install package selesai, silahkan jalankan server dengan mengetikan :
+```bash
+  npm run start-dev
 ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
