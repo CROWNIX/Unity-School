@@ -46,7 +46,7 @@ Unity School dibuat dengan
 ## Cloning Repository
 Silahkan cloning repository terlebih dahulu dengan cara buka terminal git lalu ketikan perintah berikut
 ```bash
-  git clone https://github.com/CROWNIX/Peduli-Gizi.git
+  git clone https://github.com/CROWNIX/Unity-School.git
 ```
 
 ## Installasi Backend
